@@ -1,0 +1,61 @@
+# created by virtualenv automatically
+# Python bytecode
+*.py[cod]
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# Django static and media files
+staticfiles/
+media/
+
+# Secret key and environment variables
+.env
+*.env
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+bin/
+lib/
+lib64/
+*.log
+
+# Database files (if you're using SQLite or any local DB files)
+*.sqlite3
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+
+# Mac OS specific files
+.DS_Store
+
+# VS Code specific files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Migrations (optional: you can ignore migration files if you want)
+**/migrations/
+

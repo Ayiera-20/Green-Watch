@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GreenWatch Homepage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Playwrite US Trad' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Marko One' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="intro-background">
+        <nav class="navbar">
+        <div class="logo">
+            <p style="font-family: Playwrite US Trad; font-size:24px;">GreenWatch</p>
+            <p style="font-size: 12"> Community Waste Management and<br> Recycling Platform<p>
+        </div> 
+        <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li
+        <li><a href="#">Report Waste</a></li>
+        <li><a href="#">Recycling Centers</a></li>
+        <li><a href="#">Events</a></li>
+        </ul>
+        <button class="contact-btn">Contact</button>
+    </nav>
+
+    <section class="intro">
+    <div>
+        <h1>Clean Today, Sustain <br> Tomorrow: <br> Join the Movement for<br> a Waste-Free Community!</h1>
+    </div>
+        <div class="intro-buttons">
+            <button class="intro-button1">Report Waste</button>
+            <button class="intro-button2">Find a Recycling Centre</button>
+        </div>
+    </div>
+    </section>
+
+    </div>
+    
+
+    <section class="what-we-do">
+    <div class="content">
+        <img src="{% static 'images/people-cleaning.jpg' %}" alt="People Cleaning" class="cleaning-img">
+        <div class="text">
+            <h2>What We Do</h2>
+            <h3>Help us make our city cleaner than ever</h3>
+            At  Green Watch, we are dedicated to helping<br> communities tackle waste management<br> challenges by providing easy-to-use tools for<br> reporting waste issues, locating recycling<br>
+            centers, and accessing educational resources.<br> Through partnerships and community events, we<br> foster collective action to reduce illegal dumping<br> and promote responsible waste disposal.<br>
+            <button class="btn-primary">Learn More</button>
+        </div>
+    </div>
+    </section>
+
+    <section class="report">
+    <div class="report-content">
+        <div class="text-report">
+            <h2>Report Waste issue</h2>
+            <p>Report Waste Issue</p>
+            <p>Need Help with Collection Fees?</p>
+            <button class="report-btn">Report Waste Issue</button>
+            <img src= "{% static 'images/report.jpg' %}" alt="someone standing next to a writing pad and trash can" class="report-img">
+        </div>
+    </div>
+    </section>
+
+
+    <section class="recycling-centers">
+        <h2>Recycling Centers Locator</h2>
+        <div class="center-locator">
+            <input type="text" placeholder="Center Name">
+            <input type="text" placeholder="Location">
+            <input type="text" placeholder="Accepted Materials">
+            <button class="btn-secondary">Contact Information</button>
+        </div>
+    </section>
+    <section class="community-events">
+        <h2>Community Events</h2>
+        
+        <ul>
+            <li>1. <b>Clean-up Drives</b> - Join our efforts to clean various neighborhoods.</li>
+            <li>2. <b>Recycling Workshops</b> - Learn about recycling and sustainable waste management practices.</li>
+            <li>3. <b>Educational Sessions</b> - Attend sessions on waste reduction and recycling.</li>
+        </ul>
+    </section>
+
+
+    <section class="partners">
+        <h2>Our Partners</h2>
+        <div class="partner-logos">
+            <img src="https://via.placeholder.com/150" alt="Partner 1">
+            <img src="https://via.placeholder.com/150" alt="Partner 2">
+            <img src="https://via.placeholder.com/150" alt="Partner 3">
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Green Watch. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

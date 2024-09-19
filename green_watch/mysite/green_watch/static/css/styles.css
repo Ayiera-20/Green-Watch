@@ -1,0 +1,397 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.content {
+    display: flex; 
+    overflow: hidden; 
+    min-height: 100vh;
+    width: 100%; 
+    max-width: 2000px; 
+}
+
+.left-section{
+    /* flex: 1; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 350px 0 0 400px;
+    white-space: nowrap;
+}
+
+.left-section h1 {
+    margin-bottom: 5px;
+}
+
+.left-section p {
+    margin-top: 0; 
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.right-section{
+    white-space: nowrap;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    padding: 80px 10000px 200px 50px;
+    
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; 
+}
+
+.input-field {
+    margin-bottom: 40px; 
+    padding: 20px; 
+    border-radius: 5px; 
+    border: 1.5px solid white; 
+    font-size: 16px; 
+    background-color: transparent;
+    color: white;
+    width: 170%;  
+}
+
+::placeholder{
+    color: white;
+}
+
+.register-btn {
+    padding: 12px; 
+    background-color: #4CAF50; 
+    color: white; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    width: 170%;
+}
+
+.register-btn:hover {
+    background-color: #45a049; 
+}
+
+
+.google-btn {
+    display: flex;
+    justify-content: center; 
+    width: 188%;
+    
+}
+
+.google-signin{
+    display: flex;
+    align-items: center; 
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid white; 
+    border-radius: 5px; 
+    width: 90%;
+    padding: 20px;
+    margin-right:40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.login-text {
+    margin-top: 20px; 
+    text-align: center; 
+    color: white;
+}
+
+.login-text a {
+    color: #4CAF50;
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.login-text a:hover {
+    text-decoration: underline; 
+}
+
+
+
+
+/* HomePage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    z-index: 1
+}
+
+.intro-background{
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/Intro-background.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+
+.navbar .nav-links{
+    list-style: none;
+    display: flex;
+
+}
+
+.navbar .nav-links li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contact-btn {
+    background-color: #3F734C;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+.intro {
+    height: calc(100vh - 80px); 
+    align-items:self-start;
+    justify-content: left;
+    color: white;
+    position: relative;
+    z-index: 1; 
+    margin: 200px 0px 0px 30px;
+    font-style: Marko One;
+}
+
+.intro .intro-buttons{
+    margin-top: 40px;
+    gap: 20px
+}
+
+.intro .intro-buttons .intro-button1{
+    background-color: #3F734C;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.intro .intro-buttons .intro-button2{
+    background-color: #3F734C;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.what-we-do {
+    display: flex;
+    padding: 10px 50px 10px 100px;
+    margin-bottom: 5px !important; 
+    margin-top: 30px;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    
+}
+
+.cleaning-img{
+    width: 30%; 
+    height: 42%; 
+    margin-right: 100px; 
+}
+.text{
+    margin-top: 5px;
+    
+}
+
+h2, h3{
+    padding-bottom: 20px;
+    color: #3F734C;
+}
+
+.btn-primary{
+    background-color: #3F734C;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 12px 0px;
+
+}
+
+.report-img{
+    width: 30%; 
+    height: 42%; 
+    margin-right: 100px;
+
+}
+
+.report{
+    display: flex;
+    padding: 10px 50px;
+    margin-top: 5px; 
+}
+
+
+.recycling-centers {
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.recycling-centers .center-locator {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.recycling-centers input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.community-events {
+    padding: 50px;
+    background-image: url('../images/people-cleaning.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.community-events h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.partners {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.partner-logos img {
+    width: 150px;
+    margin: 0 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3F734C;
+    color: white;
+}
+
+
+
+/* REPORT PAGE */
+.input-field {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.file-upload-wrapper input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-wrapper i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.report-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.report-btn:hover {
+    background-color: #45a049;
+}
