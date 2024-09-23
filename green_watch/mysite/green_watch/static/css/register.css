@@ -1,0 +1,124 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.content {
+    display: flex; 
+    overflow: hidden; 
+    min-height: 100vh;
+    width: 100%; 
+    max-width: 2000px; 
+}
+
+.left-section{
+    /* flex: 1; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0 0 400px;
+    white-space: nowrap;
+}
+
+.left-section h1 {
+    margin-bottom: 5px;
+}
+
+.left-section p {
+    margin-top: 0; 
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.right-section{
+    white-space: nowrap;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    padding: 80px 10000px 200px 50px;
+    
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 170%; 
+}
+
+.input-field {
+    margin-bottom: 40px; 
+    padding: 20px; 
+    border-radius: 5px; 
+    border: 1.5px solid white; 
+    font-size: 16px; 
+    background-color: transparent;
+    color: white;
+     
+}
+
+::placeholder{
+    color: white;
+}
+
+.register-btn {
+    padding: 12px; 
+    background-color: #4CAF50; 
+    color: white; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-weight: bold; 
+   
+}
+
+.register-btn:hover {
+    background-color: #45a049; 
+}
+
+
+.google-btn {
+    display: flex;
+    justify-content: center; 
+    width: 188%;
+    
+}
+
+.google-signin{
+    display: flex;
+    align-items: center; 
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid white; 
+    border-radius: 5px; 
+    width: 200%;
+    padding: 20px;
+    margin-right:40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.login-text {
+    margin-top: 20px; 
+    text-align: center; 
+    color: white;
+}
+
+.login-text a {
+    color: #4CAF50;
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.login-text a:hover {
+    text-decoration: underline; 
+}
+
