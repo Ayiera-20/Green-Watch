@@ -15,17 +15,20 @@
     <div class="intro-background">
         <nav class="navbar">
         <div class="logo">
-            <p style="font-family: Playwrite US Trad; font-size:24px;">GreenWatch</p>
-            <p style="font-size: 12"> Community Waste Management and<br> Recycling Platform<p>
+            <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
+            <p style="font-family: Arial; font-size:8px;, font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
         </div> 
         <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li
-        <li><a href="#">Report Waste</a></li>
-        <li><a href="#">Recycling Centers</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'report' %}">Report Waste</a></li>
+        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+        <li><a href="{% url 'events' %}">Events</a></li>
+        <li style="margin-left:400px"><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
         </ul>
-        <button class="contact-btn">Contact</button>
+        <button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
+        
     </nav>
 
     <section class="intro">
@@ -33,8 +36,8 @@
         <h1>Clean Today, Sustain <br> Tomorrow: <br> Join the Movement for<br> a Waste-Free Community!</h1>
     </div>
         <div class="intro-buttons">
-            <button class="intro-button1">Report Waste</button>
-            <button class="intro-button2">Find a Recycling Centre</button>
+            <button class="intro-button1" onclick="window.location.href='{% url 'report' %}'">Report Waste</button>
+            <button class="intro-button2" onclick="window.location.href='{% url 'recycle_center' %}'">Find a Recycling Centre</button>
         </div>
     </div>
     </section>
