@@ -27,5 +27,5 @@ urlpatterns = [
     path('recycle_center/', views.recycleCenter, name='recycle_center'),
     path('register/', views.register, name='register'),
     path('report/', views.report, name='report'),
-    path('contact/', views.report, name='contact'),
+    path('contact/', views.contact, name='contact'),
 ]
