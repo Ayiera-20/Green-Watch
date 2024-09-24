@@ -1,0 +1,207 @@
+/* HomePage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.intro-background{
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/Intro-background.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.intro {
+    height: calc(100vh - 80px); 
+    align-items:self-start;
+    justify-content: left;
+    color: white;
+    position: relative;
+    z-index: 1; 
+    margin: 200px 0px 0px 30px;
+    font-style: Marko One;
+}
+
+.intro .intro-buttons{
+    margin-top: 40px;
+    gap: 20px
+}
+
+.intro .intro-buttons .intro-button1{
+    background-color: #3F734C;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+
+.intro .intro-buttons .intro-button2{
+    background-color: #3F734C;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.what-we-do {
+    display: flex;
+    padding: 10px 50px 10px 100px;
+    margin: 30px 100px 0px 10px;
+
+
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    
+}
+
+.cleaning-img{
+    width: 50%; 
+    height: 100%; 
+    margin-right: 100px; 
+}
+.text{
+    margin-top: 5px;
+    
+}
+
+h3{
+    padding-bottom: 20px;
+    color: #3F734C;
+}
+
+h2{
+    padding-bottom: 30px;
+    color: #3F734C;
+}
+
+.btn-primary{
+    background-color: #3F734C;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0px;
+
+}
+
+.report{
+    margin-left: 200px;
+    margin-bottom: 20px;
+}
+
+.report-content{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 0px 50px;
+
+}
+
+.report-img{
+    display: flex;
+    
+    width: 30%; 
+    height: 100%; 
+    margin-left: 500px;
+
+}
+
+.report{
+    display: flex;
+    padding: 10px 50px;
+    margin-top: 5px; 
+}
+
+.text-report{
+    margin-top: 60px;
+
+}
+
+.report-btn{
+    background-color: #3F734C;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+
+}
+
+.text-report p{
+    margin-top: 20px;
+}
+
+
+.recycling-centers {
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.recycling-centers .center-locator {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.recycling-centers input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.community-events {
+    padding: 50px;
+    background-image: url('../images/people-cleaning.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.community-events h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.community-links{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+
+.partners {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.partner-logos img {
+    width: 150px;
+    margin: 0 20px;
+}
+

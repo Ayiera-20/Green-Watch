@@ -7,194 +7,30 @@
     <title> About Us</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Playwrite US Trad' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Marko One' rel='stylesheet'>
 </head>
-<style>
-        /* Card container */
-        .card-container {
-            display: flex;
-            gap: 20px;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            padding: 50px;
-        }
 
-        /* Card styling */
-        .card {
-            background-color: #4F7953; /* Dark green background */
-            color: white;
-            border-radius: 10px;
-            padding: 20px;
-            width: 250px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Card title styling */
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        /* Card text styling */
-        .card p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-
-
-        /* Flexbox layout for the numbered boxes */
-        .mission-cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        /* Individual card styles */
-        .mission-card {
-            background-color: rgba(255, 255, 255, 0.1); /* Transparent box */
-            padding: 20px;
-            width: 450px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: flex-start;
-            text-align: left;
-            position: relative;
-            flex-direction: row;
-        }
-
-        /* Numbered box inside the card */
-        .mission-card .number-box {
-            background-color: #000;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 5px;
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            display: inline-block;
-        }
-
-        .mission-card h3 {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: white;
-        }
-
-        .mission-card p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: ;
-        }
-
-                /* Timeline container */
-        .timeline-container {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* Line in the center of the timeline */
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background-color: #ddd;
-        }
-
-        /* Common styling for each timeline item */
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .timeline-item.left {
-            justify-content: flex-start;
-        }
-
-        .timeline-item.right {
-            justify-content: flex-end;
-        }
-
-        /* Numbered box */
-        .number-box {
-            background-color: #777;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            padding: 10px;
-            width: 40px;
-            text-align: center;
-            margin-right: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Left content */
-        .timeline-item.left .number-box {
-            margin-left: 50px;
-            margin-right: 0;
-        }
-
-        /* Content box */
-        .content-box {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 45%;
-        }
-
-        /* Styling for titles */
-        .content-box h3 {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Align content to the right or left */
-        .timeline-item.left .content-box {
-            margin-right: 10%;
-        }
-
-        .timeline-item.right .content-box {
-            margin-left: 10%;
-        }
-    </style>
 <body>
     <div class="events">
         <nav class="navbar">
         <div class="logo">
-            <p style="font-family: Playwrite US Trad; font-size:24px;">GreenWatch</p>
-            <p style="font-size: 12"> Community Waste Management and<br> Recycling Platform<p>
+            <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
+            <p style="font-family: Arial; font-size:8px;, font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
         </div> 
         <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li
-        <li><a href="#">Report Waste</a></li>
-        <li><a href="#">Recycling Centers</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'report' %}">Report Waste</a></li>
+        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+        <li><a href="{% url 'events' %}">Events</a></li>
+        <li style="margin-left:400px"><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
         </ul>
-        <button class="contact-btn">Contact</button>
+        <button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
+        
     </nav>
-
     <section class="">
     <div>
         <h1>About Us</h1>
@@ -202,8 +38,8 @@
     </section>
     </div>
 
-    <section>
-        <div>
+    <section class=" about">
+        <div class="about-text">
             <h2>About Us</h2>
             <p>
             GreenWatch is a platform dedicated to transforming waste management in Nairobi. We believe in a collaborative<br>
@@ -212,41 +48,34 @@
             </p>
         </div>
         <div class="card-container">
-        <!-- Card 1 -->
         <div class="card">
             <h3>Community Engagement</h3>
             <p>We connect residents with each other and with resources to tackle waste issues.</p>
         </div>
-
-        <!-- Card 2 -->
         <div class="card">
             <h3>Recycling Solutions</h3>
             <p>Our platform helps you find local recycling centers and learn about accepted materials.</p>
         </div>
-
-        <!-- Card 3 -->
         <div class="card">
             <h3>Sustainable Solutions</h3>
             <p>We promote responsible waste disposal and encourage responsible consumption habits.</p>
         </div>
     </div>
 
-
         </div>
     </section>
 
-    <section class="mission-vision">
+
+    <div class="mission-image">
+        <section class="mission-vision">
         <h3>Mission and Vision</h3>
         <p>We aim to create a positive impact on Nairobi's waste management system, fostering a cleaner and healthier environment for everyone.</p>
         <div class="mission-cards">
-            <!-- Card 1 -->
             <div class="mission-card">
                 <div class="number-box">1</div>
                 <h3>Reduce Waste</h3>
                 <p>Our goal is to decrease waste generation and prevent unnecessary waste from ending up in landfills.</p>
             </div>
-
-            <!-- Card 2 -->
             <div class="mission-card">
                 <div class="number-box">2</div>
                 <h3>Promote Recycling</h3>
@@ -254,14 +83,11 @@
             </div>
         </div>
         <div class="mission-cards">
-            <!-- Card 3 -->
             <div class="mission-card">
                 <div class="number-box">3</div>
                 <h3>Build Sustainable Communities</h3>
                 <p>We believe in empowering communities and fostering collaboration to create lasting positive change.</p>
             </div>
-
-            <!-- Card 4 -->
             <div class="mission-card">
                 <div class="number-box">4</div>
                 <h3>Eradicate Illegal Dumping</h3>
@@ -269,34 +95,34 @@
             </div>
         </div>
 
-        <div class="problems">
-        <h4>The Problem We Address</h4>
-        <p>Nairobi faces significant waste management challenges that impact the health and well-being of its residents.</p>
-        <div>
-        <h4>Illegal dumping</h4>
-        <p>Illegal dumping is prevalent in many areas, contributing to environmental pollution and health hazards.</p>
+        <div class= "problems-section">
+            <h4>The Problem We Address</h4>
+            <p>Nairobi faces significant waste management challenges that impact the health and well-being of its residents.</p>
+            <div class="problems">
+            <div>
+            <h4>Illegal dumping</h4>
+            <p>Illegal dumping is prevalent in many areas,<br> contributing to environmental pollution<br> and health hazards.</p>
+            </div>
+            <div>
+            <h4>Inadequate Services</h4>
+            <p>Limited municipal waste collection services<br> lead to uncollected garbage and create<br> sanitation problems.</p>
+            </div>
+            <div>
+            <h4>Limited Recycling</h4>
+            <p>Lack of accessible recycling options leads<br> to more waste ending up in landfills,<br> exacerbating waste management challenges.</p>
+            </div>
+            </div>
         </div>
-        <div>
-        <h4>Inadequate Services</h4>
-        <p>Limited municipal waste collection services lead to uncollected garbage and create sanitation problems.</p>
-        </div>
-        <div>
-        <h4>Limited Recycling</h4>
-        <p>Lack of accessible recycling options leads to more waste ending up in landfills, exacerbating waste management challenges.</p>
-        </div>
-        </div>
+        
     </section>
+    </div>
 
-
-
-    <section class="what we do">
-        <h1>What We Do</h1>
-    <p>GreenWatch empowers residents to take an active role in waste management and create a cleaner, more sustainable Nairobi.</p>
+    <section class="what-we-do">
+        <h2>What We Do</h2>
+        <p>GreenWatch empowers residents to take an active role in waste management and create a cleaner, more sustainable Nairobi.</p>
 
     <div class="timeline-container">
         <div class="timeline-line"></div>
-
-        <!-- Item 1 -->
         <div class="timeline-item left">
             <div class="number-box">1</div>
             <div class="content-box">
@@ -304,8 +130,6 @@
                 <p>Report waste issues in your area directly through our app, ensuring prompt action and resolution.</p>
             </div>
         </div>
-
-        <!-- Item 2 -->
         <div class="timeline-item right">
             <div class="content-box">
                 <h3>Recycling Center Locator</h3>
@@ -313,8 +137,6 @@
             </div>
             <div class="number-box">2</div>
         </div>
-
-        <!-- Item 3 -->
         <div class="timeline-item left">
             <div class="number-box">3</div>
             <div class="content-box">
@@ -322,8 +144,6 @@
                 <p>Access informative resources and learn about reducing, reusing, and recycling to minimize waste.</p>
             </div>
         </div>
-
-        <!-- Item 4 -->
         <div class="timeline-item right">
             <div class="content-box">
                 <h3>Community Clean-Ups</h3>
@@ -331,8 +151,6 @@
             </div>
             <div class="number-box">4</div>
         </div>
-
-        <!-- Item 5 -->
         <div class="timeline-item left">
             <div class="number-box">5</div>
             <div class="content-box">
@@ -341,14 +159,13 @@
             </div>
         </div>
     </div>
-
     </section>
 
     <section class="our-partners">
-        <img src="" alt="">
+        <img src="{% static 'images/partners.jpg' %}" alt="organizations logos" class="partner-image">
         <div>
-            <h4>Our Partners</h4>
-            <p>We believe in collaborative partnerships that amplify our impact and create a lasting positive change in Nairobi.</p>
+            <h4 class ="partner-text" style="margin-top:200px;">Our Partners</h4>
+            <p class="partner-text">We believe in collaborative partnerships that amplify our impact and<br> create a lasting positive change in Nairobi.</p>
         </div>
     </section>
     
@@ -356,7 +173,7 @@
     <section class="donation">
     <div class="donation-right">
         <h2>Donate and Support <br> Our Mission</h2>
-        <p>Your support is crucial to our mission to create a cleaner, greener Nairobi for all</p>
+        <p>Your support is crucial to our mission to create a cleaner, greener Nairobi for all.<br><br></p>
         <p>Why donate?</p>
         <ul>
             <li>Provides subsidized waste collection services for low-income families</li>
@@ -367,20 +184,22 @@
         <ul>
             <li>Every contribution, no matter the size, helps us empower communities<br> and create lasting positive change.</li>
         </ul>
-        <img src="" alt="">
-        <button class="">Donate Now</button>
+        <button class="donation-btn">Donate Now</button>
+
+    </div>
+        <img src="{% static 'images/aboutt.jpg' %}"alt="people cleaning and planting trees" class="donate-img">
+    
     </section>
 
     <section class="call-to-action">
-        <div>
+        <div class="call-text">
             <h2>Call to Action</h2>
             <p>Join us in our mission to create a cleaner, greener Nairobi.<br> Together, we can make a difference.</p>
+            <button class="sign-up-btn" onclick="window.location.href='{% url 'register' %}'">Sign Up</button>
+            <button class="event-btn" onclick="window.location.href='{% url 'events' %}'">Join an Event</button>
         </div>
-        <div>
-            <button class="">Sign Up</button>
-            <button class="">Join an Event</button>
-        </div>
-        <img src="" alt="">
+    
+        <img src="{% static 'images/call.jpg' %}" alt="vibrant, outdoor community event focused on environmental sustainability" class="call-img">
         
     </section>
 

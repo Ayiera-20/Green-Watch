@@ -6,41 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Recycle Centers</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="{% static 'css/recycle.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Playwrite US Trad' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Marko One' rel='stylesheet'>
 </head>
 
 <body>
-
         <div>
             <nav class="navbar">
-            <div class="logo">
-                <p style="font-family: Playwrite US Trad; font-size:24px;">GreenWatch</p>
-                <p style="font-size: 12"> Community Waste Management and<br> Recycling Platform<p>
-            </div> 
-                <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Report Waste</a></li>
-                <li><a href="#">Recycling Centers</a></li>
-                <li><a href="#">Events</a></li>
-                </ul>
-                <button class="contact-btn">Contact</button>
-            </nav>
+        <div class="logo">
+            <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
+            <p style="font-family: Arial; font-size:8px;, font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
+        </div> 
+        <ul class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'report' %}">Report Waste</a></li>
+        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+        <li><a href="{% url 'events' %}">Events</a></li>
+        <li style="margin-left:400px"><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+        </ul>
+        <button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button>  
+    </nav>
         </div>
-    <input type="search" id="search" name="query" placeholder="Enter Location here..." class="search-bar">
-    <img src="" alt="map">
+    <input type="search" id="search" name="query" placeholder="Search Location here..." class="search-bar">
+    <img src="{% static 'images/location.jpg' %}" alt="map" class="map">
     <div class="center-location">
-            <img src="https://via.placeholder.com/150" alt="Center 1">
-            <img src="https://via.placeholder.com/150" alt="Center 2">
-            <img src="https://via.placeholder.com/150" alt="Center 3">
-            <img src="https://via.placeholder.com/150" alt="Center 4">
+        <div>
+        <img src="https://img.freepik.com/free-vector/recycling-centre-isometric-composition_1284-24253.jpg?t=st=1727205517~exp=1727209117~hmac=6a3033e69f22e19d9719374a5813b3fb534979ea3db6161105a4fdf072ac0c2d&w=740"
+            alt="recycling center" class="center-image">
+        <p>Center Name</p>
+        <p>Location</p>
+        <p>Accepted Materials</p>
+        <p>Operating hours:</p>
+        <p>Contact:</p>
+        </div>
+        <div>
+        <img src="https://img.freepik.com/free-vector/recycling-centre-isometric-composition_1284-24253.jpg?t=st=1727205517~exp=1727209117~hmac=6a3033e69f22e19d9719374a5813b3fb534979ea3db6161105a4fdf072ac0c2d&w=740"
+            alt="recycling center" class="center-image">
+        <p>Center Name</p>
+        <p>Location</p>
+        <p>Accepted Materials</p>
+        <p>Operating hours:</p>
+        <p>Contact:</p>
+        </div>
+        <div>
+        <img src="https://img.freepik.com/free-vector/recycling-centre-isometric-composition_1284-24253.jpg?t=st=1727205517~exp=1727209117~hmac=6a3033e69f22e19d9719374a5813b3fb534979ea3db6161105a4fdf072ac0c2d&w=740"
+            alt="recycling center" class="center-image">
+        <p>Center Name</p>
+        <p>Location</p>
+        <p>Accepted Materials</p>
+        <p>Operating hours:</p>
+        <p>Contact:</p>
+        </div>
+        <div>
+        <img src="https://img.freepik.com/free-vector/recycling-centre-isometric-composition_1284-24253.jpg?t=st=1727205517~exp=1727209117~hmac=6a3033e69f22e19d9719374a5813b3fb534979ea3db6161105a4fdf072ac0c2d&w=740"
+            alt="recycling center" class="center-image">
+        <p>Center Name</p>
+        <p>Location</p>
+        <p>Accepted Materials</p>
+        <p>Operating hours:</p>
+        <p>Contact:</p>
+        </div>      
     </div>
-    <div class="recycle-background">
-    <h2>GreenWatch</h2>
-    <p>Join us in Cleaning Our Cities,<br>Saving Our Future</p>
-    </div>
+    <footer>
+        <p>&copy; 2024 Green Watch. All Rights Reserved.</p>
+    </footer>
+
 
 </body>

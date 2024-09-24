@@ -7,6 +7,7 @@
     <title> GreenWatch Events</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/events.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Playwrite US Trad' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Marko One' rel='stylesheet'>
 </head>
@@ -15,40 +16,52 @@
     <div class="events">
         <nav class="navbar">
         <div class="logo">
-            <p style="font-family: Playwrite US Trad; font-size:24px;">GreenWatch</p>
-            <p style="font-size: 12"> Community Waste Management and<br> Recycling Platform<p>
+            <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
+            <p style="font-family: Arial; font-size:8px;, font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
         </div> 
         <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li
-        <li><a href="#">Report Waste</a></li>
-        <li><a href="#">Recycling Centers</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'report' %}">Report Waste</a></li>
+        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+        <li><a href="{% url 'events' %}">Events</a></li>
+        <li style="margin-left:400px"><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
         </ul>
-        <button class="contact-btn">Contact</button>
-    </nav>
-
-    <section class="">
-    <div>
+        <button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
+        </nav>   
         <h1>FEATURED <br> COMMUNITY EVENTS</h1>
     </div>
-    </section>
-    </div>
 
-    <section>
-    <p>Upcoming Events</p>
-    <div class="Event-details">
-            <img src="https://via.placeholder.com/150" alt="Center 1">
-            <img src="https://via.placeholder.com/150" alt="Center 2">
-            <img src="https://via.placeholder.com/150" alt="Center 3">
-            <img src="https://via.placeholder.com/150" alt="Center 4">
+    <p class="upcoming-events-text">Upcoming Events</p>
+    <section class=upcoming-events>
+    <div> 
+        <img src="https://img.freepik.com/free-photo/group-happy-african-volunteers-hold-blank-board-with-unity-sign-park-africa-volunteering-charity-people-ecology-concept_627829-324.jpg?t=st=1727208875~exp=1727212475~hmac=d3a34855192d75087d3c684bd7687fdc8acbab346d5912f2a572e3cc330c10b3&w=996" 
+        alt="Group of happyvolunteers hold blank board with unity sign  " class="event-img">
+        <p>Event 1</p>
+    </div>
+    <div> 
+        <img src="https://img.freepik.com/free-photo/group-happy-african-volunteers-hold-blank-board-with-unity-sign-park-africa-volunteering-charity-people-ecology-concept_627829-324.jpg?t=st=1727208875~exp=1727212475~hmac=d3a34855192d75087d3c684bd7687fdc8acbab346d5912f2a572e3cc330c10b3&w=996" 
+        alt="Group of happyvolunteers hold blank board with unity sign  " class="event-img">
+        <p>Event 1</p>
+    </div>
+    <div> 
+        <img src="https://img.freepik.com/free-photo/group-happy-african-volunteers-hold-blank-board-with-unity-sign-park-africa-volunteering-charity-people-ecology-concept_627829-324.jpg?t=st=1727208875~exp=1727212475~hmac=d3a34855192d75087d3c684bd7687fdc8acbab346d5912f2a572e3cc330c10b3&w=996" 
+        alt="Group of happyvolunteers hold blank board with unity sign  " class="event-img">
+        <p>Event 1</p>
+    </div>
+    <div> 
+        <img src="https://img.freepik.com/free-photo/group-happy-african-volunteers-hold-blank-board-with-unity-sign-park-africa-volunteering-charity-people-ecology-concept_627829-324.jpg?t=st=1727208875~exp=1727212475~hmac=d3a34855192d75087d3c684bd7687fdc8acbab346d5912f2a572e3cc330c10b3&w=996" 
+        alt="Group of happyvolunteers hold blank board with unity sign  " class="event-img">
+        <p>Event 1</p>
     </div>
     </section>
     
-
-    <footer>
-        <p>&copy; 2024 Green Watch. All Rights Reserved.</p>
-    </footer>
-
+    <section class="last-section">
+        <h2>GreenWatch</h2>
+        <div class="last-section-text">
+            <p>Join us in Cleaning Our Cities,<br>Saving Our Future<p>
+        </div>
+    <section>
 </body>
 </html>

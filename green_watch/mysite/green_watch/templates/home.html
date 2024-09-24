@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> GreenWatch Homepage</title>
     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Playwrite US Trad' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Marko One' rel='stylesheet'>
@@ -51,9 +52,10 @@
         <div class="text">
             <h2>What We Do</h2>
             <h3>Help us make our city cleaner than ever</h3>
-            At  Green Watch, we are dedicated to helping<br> communities tackle waste management<br> challenges by providing easy-to-use tools for<br> reporting waste issues, locating recycling<br>
-            centers, and accessing educational resources.<br> Through partnerships and community events, we<br> foster collective action to reduce illegal dumping<br> and promote responsible waste disposal.<br>
-            <button class="btn-primary">Learn More</button>
+            <p>At  Green Watch, we are dedicated to helping communities tackle waste management<br> challenges by providing easy-to-use tools for reporting waste issues, locating recycling<br>
+            centers, and accessing educational resources. Through partnerships and community events, <br> we foster collective action to reduce illegal dumping and promote responsible waste disposal.
+            </p>
+            <button class="btn-primary" onclick="window.location.href='{% url 'about' %}'">Learn More</button>
         </div>
     </div>
     </section>
@@ -64,9 +66,9 @@
             <h2>Report Waste issue</h2>
             <p>Report Waste Issue</p>
             <p>Need Help with Collection Fees?</p>
-            <button class="report-btn">Report Waste Issue</button>
-            <img src= "{% static 'images/report.jpg' %}" alt="someone standing next to a writing pad and trash can" class="report-img">
+            <button class="report-btn" onclick="window.location.href='{% url 'report' %}'">Report Waste Issue</button>
         </div>
+        <img src= "{% static 'images/report.jpg' %}" alt="someone standing next to a writing pad and trash can" class="report-img">
     </div>
     </section>
 
@@ -83,10 +85,10 @@
     <section class="community-events">
         <h2>Community Events</h2>
         
-        <ul>
-            <li>1. <b>Clean-up Drives</b> - Join our efforts to clean various neighborhoods.</li>
-            <li>2. <b>Recycling Workshops</b> - Learn about recycling and sustainable waste management practices.</li>
-            <li>3. <b>Educational Sessions</b> - Attend sessions on waste reduction and recycling.</li>
+        <ul class="community-links">
+            <li><b>Clean-up Drives</b> - Join our efforts to clean various neighborhoods.<br></li>
+            <li><b>Recycling Workshops</b> - Learn about recycling and sustainable waste management practices.</li>
+            <li><b>Educational Sessions</b> - Attend sessions on waste reduction and recycling.</li>
         </ul>
     </section>
 

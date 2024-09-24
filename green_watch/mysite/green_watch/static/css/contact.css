@@ -1,0 +1,85 @@
+body {
+    background-color: #f4f4f4;
+}
+
+/* Container for the card */
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    background-color: white;
+}
+
+/* Left side (Form section) */
+.card-form {
+    padding: 30px;
+    flex: 1;
+    background-color: white;
+}
+
+.card-form h2 {
+    color: #3F734C;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+textarea {
+    height: 100px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #3F734C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Right side (Contact Info) */
+.card-contact-info {
+    background-color: #2D5D36;
+    color: white;
+    padding: 30px;
+    flex: 0.7;
+}
+
+.card-contact-info h3 {
+    margin-bottom: 20px;
+}
+
+.card-contact-info p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.card-contact-info p span {
+    font-weight: bold;
+}

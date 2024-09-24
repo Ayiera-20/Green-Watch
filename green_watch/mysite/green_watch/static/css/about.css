@@ -1,0 +1,343 @@
+    @import url('https://fonts.googleapis.com/css?family=Marko One');
+    .events{
+    position: relative;
+    height: 70vh;
+    background-image: url('../images/aboutt.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    }
+
+    .about{
+        background-color: #f4f4f4;
+    }
+
+    h1{
+        color: white;
+        text-align: center;
+        font-size: 64px;
+        margin-top: 100px;
+        font-family: Marko One;
+        
+    }
+
+    .about-text{
+        margin: 0px 0px 50px 150px;
+        background-color: #f4f4f4;
+        padding-top: 40px;
+    }
+
+    h2{
+        color: #3F734C;
+        font-family: Marko One;
+    }
+
+    /* Card container */
+    .card-container {
+        display: flex;
+        gap: 20px;
+        font-family:Marko One, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        padding: 10px 50px 50px 50px;
+    }
+
+    /* Card styling */
+    .card {
+        background-color: #4F7953; /* Dark green background */
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Card title styling */
+    .card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    /* Card text styling */
+    .card p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+.mission-vision {
+    margin-left: 300px;
+    padding-top: 40px;
+    padding-top: 40px;
+
+}
+
+.mission-image{
+    position: relative;
+    height: 110vh;
+    background-image: url('../images/mission-img.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+}
+
+    /* Flexbox layout for the numbered boxes */
+    .mission-cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    /* Individual card styles */
+    .mission-card {
+        background-color: transparent;
+        padding: 20px;
+        width: 450px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        position: relative;
+        flex-direction: row;
+    }
+
+    /* Numbered box inside the card */
+    .mission-card .number-box {
+        background-color: white;
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .mission-card h3 {
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #87FFA5;
+    }
+
+    .mission-card p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-left: 30px;
+    }
+
+    .mission-vision h3{
+        color: #87FFA5;
+        font-family: Marko One;
+    }
+
+
+
+    .problems{
+        display: flex;
+        gap: 30px;
+    }
+
+    .problems-section{
+        background-color: white;
+        color: black;
+        width: 70%;
+        padding: 10px 20px 30px 40px
+    }
+
+
+
+    .what-we-do {
+        margin-left: 150px;
+        background-image: url('../images/Recycle\ Sign.jpg');
+        background-size: 80% 80%;;
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+    }
+
+    /* Timeline container */
+    .timeline-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        max-width: 1600px;
+        margin: 25px 55px 0px 0px;
+    }
+
+    /* Line in the center of the timeline */
+    .timeline-line {
+        position: absolute;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        background-color: #ddd;
+    }
+
+    /* Common styling for each timeline item */
+    .timeline-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .timeline-item.left {
+        justify-content: flex-start;
+    }
+
+    .timeline-item.right {
+        justify-content: flex-end;
+    }
+
+    /* Numbered box */
+    .number-box {
+        background-color: #777;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 10px;
+        width: 40px;
+        text-align: center;
+        margin-right: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Left content */
+    .timeline-item.left .number-box {
+        margin-left: 50px;
+        margin-right: 0;
+    }
+
+    /* Content box */
+    .content-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 45%;
+    }
+
+    /* Styling for titles */
+    .content-box h3 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Align content to the right or left */
+    .timeline-item.left .content-box {
+        margin-right: 10%;
+    }
+
+    .timeline-item.right .content-box {
+        margin-left: 10%;
+    }
+
+
+    .our-partners{
+        display: flex;
+        margin-top: 25px;
+        margin-left: 200px;
+    }
+
+    .partner-image{
+        width: 35%;
+        height: 10%;
+    }
+
+    .partner-text{
+        margin-left: 100px;
+    }
+
+
+    .donation{
+        display: flex;
+        margin-left: 100px;
+        margin-top: 80px;
+
+    }
+
+    .donation-btn{
+    background-color: #3F734C;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+
+    .donate-img{
+        width: 35%;
+        height: 10%;
+        margin-left: 300px;
+        margin-top: 40px;
+
+
+    }
+
+
+    .call-to-action{
+        margin-left: 100px;
+        margin-bottom: 20px;
+        padding-top: 30px;
+        display: flex;
+    }
+
+    .sign-up-btn{
+    background-color: #3F734C;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+    .sign-up-btn:hover {
+        background-color: #45a049;
+    }
+
+
+    .event-btn{
+    background-color: white;
+    padding: 12px 25px;
+    border:  2px solid #3F734C;
+    color: #3F734C;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10px;
+    }
+    .event-btn:hover {
+        background-color: #45a049;
+    }
+
+
+    .call-img{
+        width: 300px;
+        height: 400px;
+        margin-left: 550px;
+        margin-top: 40px;
+    }
+
+    .call-text{
+        padding-top: 50px;
+    }

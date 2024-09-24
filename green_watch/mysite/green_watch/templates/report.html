@@ -6,23 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Report Waste issue</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="static/css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Playwrite US Trad' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Marko One' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/report.css' %}">
 </head>
 
 <body>
     <div class="report">
-        <h1>Report Issue</h1>
+        <h1>Report Waste Issue</h1>
         <p>Help keep your community clean by reporting waste problems in your area. Whether it's illegal dumping, uncollected garbage, <br> 
         or overflowing bins, your report helps us take action to maintain a cleaner environment.
         <p>
     </div>
     <form>
-        <input type="text" placeholder="Location" class="input-field">
-        <input type="text" placeholder="Community Name/Sub-location" class="input-field">
-        <textarea name="Description of the issue"></textarea>
+        <input type="text" placeholder="Enter Location" class="input-field">
+        <input type="text" placeholder="Enter Community Name/Sub-location" class="input-field">
+        <textarea placeholder="Enter Description of the issue here...">Description of the issue</textarea>
         <div class="file-upload-wrapper">
             <i class="fas fa-cloud-upload-alt"></i> 
             <span>(Optional): Upload image of the waste issue</span>
