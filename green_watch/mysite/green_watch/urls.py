@@ -10,5 +10,4 @@ urlpatterns = [
     path('', views.recycleCenter),
     path('', views.register),
     path('', views.report),
-    path('', views.contact),
 ]
