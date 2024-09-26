@@ -1,7 +1,7 @@
 /* REPORT PAGE */
 body{
     position: relative;
-    height: 100vh;
+    height: 100vh; 
     background-image: url('../images/waste.jpg');
     background-size: cover;
     background-blend-mode: overlay;
@@ -9,10 +9,10 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 30px 100px 0 300px;
+    padding: 10px 100px 0 300px;
     line-height: 30px;
     width: 60%;
-    overflow: hidden;
+    overflow: hidden; 
 
 }
 
@@ -90,3 +90,8 @@ textarea {
 .report-btn:hover {
     background-color: #45a049;
 }
+
+.ensure{
+    color: red;
+}
+

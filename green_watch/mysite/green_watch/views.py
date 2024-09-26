@@ -4,6 +4,7 @@ from .models import CustomUser
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 import json
 from django.shortcuts import render
 # Create your views here.
@@ -45,7 +46,7 @@ def register(request):
         
         if full_name and email and password:
             user = CustomUser.objects.create_user(full_name=full_name, email=email, password=password)
-            return redirect('login')  # Redirect to login page after successful registration
+            return redirect('login')  
         else:
             error_message = "Please fill in all fields"
             return render(request, 'register.html', {'error_message': error_message})
@@ -63,7 +64,7 @@ def sign_in_submit(request):
         if user is not None:
             # Log in the user
             login(request, user)
-            return redirect('home')  # Redirect to a homepage or other page after login
+            return redirect('home')  
         else:
             # Invalid login credentials
             return render(request, 'login.html', {'error': 'Invalid credentials'})
@@ -73,11 +74,11 @@ def sign_in_submit(request):
 
 def logout_view(request):
     logout(request)  
-    messages.success(request, "Logged out successfully")  # Optional: Add a success message
+    messages.success(request, "Logged out successfully")  
     return redirect('login')
 
 
-
+@login_required(login_url='login')
 def submit_report(request):
     if request.method == 'POST':
         location = request.POST.get('location')
@@ -100,7 +101,7 @@ def submit_report(request):
                 description=description,
                 photo=photo
             )
-            return redirect('home')  # Redirect to the home page after successful submission
+            return redirect('home')  
         except Exception as e:
             return render(request, 'report.html', {
                 'error': f'An error occurred: {e}'
