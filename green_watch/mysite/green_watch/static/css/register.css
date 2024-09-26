@@ -6,6 +6,8 @@
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.6);
+    background-position: fixed;
+    background-repeat: no-repeat;
 }
 .content {
     display: flex; 

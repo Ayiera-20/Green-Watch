@@ -3,6 +3,7 @@ from .models import Report
 from .models import CustomUser
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from django.contrib.auth import logout
 import json
 from django.shortcuts import render
 # Create your views here.
@@ -10,6 +11,9 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'home.html')
+
+def welcome(request):
+    return render(request, 'welcome.html')
 
 def about(request):
     return render(request, 'about.html')
@@ -20,7 +24,7 @@ def contact(request):
 def events(request):
     return render(request, 'events.html')
 
-def login(request):
+def login_page(request):
     return render(request, 'login.html')
 
 def recycleCenter(request):
@@ -48,20 +52,30 @@ def register(request):
     
     return render(request, 'register.html')
 
-def login_view(request):
+def sign_in_submit(request):
     if request.method == "POST":
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-
+        email = request.POST['email']
+        password = request.POST['password']
+        
+        # Authenticate the user
         user = authenticate(request, email=email, password=password)
-
+        
         if user is not None:
+            # Log in the user
             login(request, user)
-            return redirect('home')  
+            return redirect('home')  # Redirect to a homepage or other page after login
         else:
-            messages.error(request, "Invalid email or password")
-
+            # Invalid login credentials
+            return render(request, 'login.html', {'error': 'Invalid credentials'})
+    
     return render(request, 'login.html')
+
+
+def logout_view(request):
+    logout(request)  
+    messages.success(request, "Logged out successfully")  # Optional: Add a success message
+    return redirect('login')
+
 
 
 def submit_report(request):

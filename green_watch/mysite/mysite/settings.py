@@ -44,6 +44,11 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'green_watch.CustomUser'
 
+AUTHENTICATION_BACKENDS = [
+    'green_watch.backends.EmailBackend',  
+    'django.contrib.auth.backends.ModelBackend',  
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

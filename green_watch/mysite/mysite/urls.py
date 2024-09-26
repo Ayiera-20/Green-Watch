@@ -22,14 +22,17 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('home', views.home, name='home'),
+    path('', views.welcome, name='welcome'),
     path('about/', views.about, name='about'),
     path('events/', views.events, name='events'),
-    path('login/', views.login, name='login'),
+    path('login/', views.login_page, name='login'),
     path('recycle_center/', views.recycleCenter, name='recycle_center'),
     path('register/', views.register, name='register'),
     path('report/', views.report, name='report'),
     path('contact/', views.contact, name='contact'),
+    path('login/submit/', views.sign_in_submit, name='sign_in_submit'),
+    path('logout/', views.logout_view, name='logout'),
     path('submit-report/', views.submit_report, name='submit_report')
 ]
 
