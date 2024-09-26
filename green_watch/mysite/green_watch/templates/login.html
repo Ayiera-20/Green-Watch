@@ -23,11 +23,19 @@
                             Sign in with google
                         </button>
                     </div>
-                    <form>
-                        <input type="email" placeholder="User email" class="input-field">
-                        <input type="password" placeholder="Password" class="input-field">
-                        <button type="submit" class="register-btn">Register</button>
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        <input type="email" name="email" placeholder="User email" class="input-field" autocomplete="email">
+                        <input type="password" name="password" placeholder="Password" class="input-field" autocomplete="password">
+                        <button type="submit" class="register-btn">Login</button>
                     </form>
+                    {% if messages %}
+                        <div class="error-messages">
+                            {% for message in messages %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
                     <p class="login-text">Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
                 </div>
             </div>

@@ -23,10 +23,11 @@
                             Sign in with google
                         </button>
                     </div>
-                    <form>
-                        <input type="text" placeholder="Full Name" class="input-field">
-                        <input type="email" placeholder="User email" class="input-field">
-                        <input type="password" placeholder="Password" class="input-field">
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        <input type="text" name="full_name" placeholder="Full Name" class="input-field">
+                        <input type="email"name="email" placeholder="User email" class="input-field">
+                        <input type="password" name="password" placeholder="Password" class="input-field">
                         <button type="submit" class="register-btn">Register</button>
                     </form>
                     <p class="login-text">Already have an account? <a href="{% url 'login' %}">login</a></p>

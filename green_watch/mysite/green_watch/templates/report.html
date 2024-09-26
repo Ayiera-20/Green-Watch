@@ -16,10 +16,11 @@
         or overflowing bins, your report helps us take action to maintain a cleaner environment.
         <p>
     </div>
-    <form>
-        <input type="text" placeholder="Enter Location" class="input-field">
-        <input type="text" placeholder="Enter Community Name/Sub-location" class="input-field">
-        <textarea placeholder="Enter Description of the issue here...">Description of the issue</textarea>
+    <form  method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="location" placeholder="Enter Location" class="input-field">
+        <input type="text" name="community_name" placeholder="Enter Community Name/Sub-location" class="input-field">
+        <textarea name="description" placeholder="Enter Description of the issue here...">Description of the issue</textarea>
         <div class="file-upload-wrapper">
             <i class="fas fa-cloud-upload-alt"></i> 
             <span>(Optional): Upload image of the waste issue</span>
@@ -32,3 +33,4 @@
 
 
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
