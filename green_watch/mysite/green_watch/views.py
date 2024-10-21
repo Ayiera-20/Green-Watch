@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Report
+from .models import Contact
 from .models import CustomUser
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
@@ -69,7 +70,10 @@ def sign_in_submit(request):
             # Invalid login credentials
             return render(request, 'login.html', {'error': 'Invalid credentials'})
     
-    return render(request, 'login.html')
+    next_url = request.GET.get('next', '') 
+    return render(request, 'login.html', {'next': next_url})
+
+
 
 
 def logout_view(request):
@@ -99,8 +103,10 @@ def submit_report(request):
                 location=location,
                 community_name=community_name,
                 description=description,
-                photo=photo
+                photo=photo,
+                user=request.user
             )
+            messages.success(request, 'Your report has been submitted successfully!')
             return redirect('home')  
         except Exception as e:
             return render(request, 'report.html', {
@@ -109,4 +115,53 @@ def submit_report(request):
 
     # If GET request, render the form
     return render(request, 'report.html')
+
+
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        # Validation check
+        if not name or not email or not message:
+            # Return the form with an error message if any field is missing
+            return render(request, 'contact.html', {
+                'error': 'Please fill all the required fields!'
+            })
+
+        # Optional: Add email format validation
+        if not validate_email(email):
+            return render(request, 'contact.html', {
+                'error': 'Please enter a valid email address!'
+            })
+        
+        user = request.user if request.user.is_authenticated else None
+
+        try:
+            Contact.objects.create(
+                name=name,
+                email=email,
+                message=message,
+                user=user
+            )
+            messages.success(request, 'Your message has been sent successfully!')
+            return redirect('home')  
+        except Exception as e:
+            return render(request, 'contact.html', {
+                'error': f'An error occurred: {e}'
+            })
+
+    # If GET request, render the form
+    return render(request, 'contact.html')
+
+def validate_email(email):
+    from django.core.exceptions import ValidationError
+    from django.core.validators import validate_email as django_validate_email
+
+    try:
+        django_validate_email(email)
+        return True
+    except ValidationError:
+        return False
 
