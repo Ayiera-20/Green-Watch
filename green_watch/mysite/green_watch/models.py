@@ -51,7 +51,18 @@ class Report(models.Model):
     description = models.TextField()
     photo = models.ImageField(upload_to='reports/photos/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.community_name} - {self.location}"
     
+
+class Contact(models.Model):
+    name= models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return f"Message from {self.name} ({self.email})"
