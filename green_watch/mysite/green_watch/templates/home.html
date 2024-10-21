@@ -15,21 +15,40 @@
 <body>
     <div class="intro-background">
         <nav class="navbar">
-        <div class="logo">
-            <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
-            <p style="font-family: Arial; font-size:8px;, font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
-        </div> 
-        <ul class="nav-links">
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'report' %}">Report Waste</a></li>
-        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
-        <li><a href="{% url 'events' %}">Events</a></li>
-        <li><a href="{% url 'logout' %}">Logout</a></li>
-        </ul>
-        <button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
-        
-    </nav>
+            <div class="logo">
+                <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
+                <p style="font-family: Arial; font-size:8px;, font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
+            </div>
+            <ul class="nav-links">
+                {% if user.is_authenticated %}
+
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'report' %}">Report Waste</a></li>
+                    <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+                    <li ><a href="{% url 'events' %}">Events</a></li>
+                    <li style="margin-left:550px"><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'report' %}">Report Waste</a></li>
+                    <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li style="margin-left:400px"><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+            <button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
+        </nav>
+
+    {% if messages %}
+        <div id="message-box" class="message-active">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
 
     <section class="intro">
     <div>
@@ -106,5 +125,12 @@
         <p>&copy; 2024 Green Watch. All Rights Reserved.</p>
     </footer>
 
+
+    <script>
+        // Auto-dismiss the message box after 5 seconds
+        setTimeout(function() {
+            document.getElementById('message-box').style.display = 'none';
+        }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
 </body>
 </html>

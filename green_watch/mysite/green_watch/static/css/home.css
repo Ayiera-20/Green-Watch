@@ -205,3 +205,25 @@ h2{
     margin: 0 20px;
 }
 
+
+#message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: black;  /* Green background */
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000; /* Stay on top */
+    width: 300px;
+}
+
+/* Display the message box if it has the 'message-active' class */
+.message-active {
+    display: block;
+}
+
+
