@@ -1,66 +1,8 @@
 # created by virtualenv automatically
 # Python bytecode
-*.py[cod]
-__pycache__/
-*.so
-*.egg
-*.egg-info/
-dist/
-build/
-eggs/
-parts/
-var/
-sdist/
-wheels/
-pip-wheel-metadata/
-*.manifest
-*.spe
 
-# Django static and media files
-staticfiles/
-media/
 
 # Secret key and environment variables
 .env
 *.env
-
-#database dump files (commonly generated backups or exports)
-*.sql     
-# Ignore potential MySQL database export files
-*.mysql
-*.db   
-
-# Virtual environment
-venv/
-env/
-ENV/
-.venv/
-.virtualenv/
-bin/
-lib/
-lib64/
-*.log
-
-# Database files 
-*.sqlite3
-# Pytest cache
-.pytest_cache/
-
-# Coverage reports
-htmlcov/
-.tox/
-.nox/
-
-# Mac OS specific files
-.DS_Store
-
-# VS Code specific files
-.vscode/
-.idea/
-
-# Logs
-*.log
-
-# Migrations
-**/migrations/
 
