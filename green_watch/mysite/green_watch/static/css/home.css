@@ -212,16 +212,14 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: black;  /* Green background */
-    color: white;
+    background-color: black;  
     font-size: 16px;
     border-radius: 5px;
     text-align: center;
-    z-index: 1000; /* Stay on top */
+    z-index: 1000; 
     width: 300px;
 }
 
-/* Display the message box if it has the 'message-active' class */
 .message-active {
     display: block;
 }
