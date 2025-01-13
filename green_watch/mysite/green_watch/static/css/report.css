@@ -2,7 +2,7 @@
 body{
     position: relative;
     height: 100vh; 
-    background-image: url('../images/waste.jpg');
+    background-image: url('../images/reporti.jpg');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.8);
@@ -13,12 +13,18 @@ body{
     line-height: 30px;
     width: 60%;
     overflow: hidden; 
+    display: inline-block;
+    align-content: center;
 
 }
 
 .report{
     text-align: center;
     color: white;
+}
+
+.report h1{
+    font-size: 2rem;
 }
 .input-field {
     display: block;
@@ -80,11 +86,12 @@ textarea {
     color: white;
     font-weight: bold;
     padding: 12px 25px;
+    margin-left: 300px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
+    width: 30%;
 }
 
 .report-btn:hover {
@@ -93,5 +100,10 @@ textarea {
 
 .ensure{
     color: red;
+}
+
+
+@media (max-width: 768px){
+   
 }
 
