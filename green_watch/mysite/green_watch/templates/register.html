@@ -17,17 +17,17 @@
             <div class="right-section">
                 <div class="register-form">
                     <h2>Register</h2>
-                    <div class="google-btn">
+                    <!-- <div class="google-btn">
                         <button class="google-signin"> 
                             <img src="{% static 'images/google.svg' %}"  class="google-logo" alt="Google logo" style="width:20px">
                             Sign in with google
                         </button>
-                    </div>
+                    </div> -->
                     <form method="POST" action="">
                         {% csrf_token %}
-                        <input type="text" name="full_name" placeholder="Full Name" class="input-field">
-                        <input type="email"name="email" placeholder="User email" class="input-field">
-                        <input type="password" name="password" placeholder="Password" class="input-field">
+                        <input type="text" name="full_name" placeholder="Full Name" class="input-field" required>
+                        <input type="email"name="email" placeholder="User email" class="input-field" required>
+                        <input type="password" name="password" placeholder="Password" class="input-field" required>
                         <button type="submit" class="register-btn">Register</button>
                     </form>
                     <p class="login-text">Already have an account? <a href="{% url 'login' %}">login</a></p>

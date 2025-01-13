@@ -17,12 +17,12 @@
             <div class="right-section">
                 <div class="register-form">
                     <h2>Log in</h2>
-                    <div class="google-btn">
+                    <!-- <div class="google-btn">
                         <button class="google-signin"> 
                             <img src="{% static 'images/google.svg' %}"  class="google-logo" alt="Google logo" style="width:20px">
                             Sign in with google
                         </button>
-                    </div>
+                    </div> -->
                     <form method="POST" action="{% url 'sign_in_submit' %}">
                         {% csrf_token %}
                         <input type="email" name="email" placeholder="User email" class="input-field">

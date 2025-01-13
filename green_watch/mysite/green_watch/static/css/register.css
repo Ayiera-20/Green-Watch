@@ -1,12 +1,13 @@
 .container {
     display: flex;
+    flex-wrap: wrap;
     min-height: 100vh;
     align-items: center;
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/envirjpg.jpg');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.6);
-    background-position: fixed;
+    background-position: center;
     background-repeat: no-repeat;
 }
 .content {
@@ -29,12 +30,13 @@
 
 .left-section h1 {
     margin-bottom: 5px;
+    font-size: 2rem;
 }
 
 .left-section p {
     margin-top: 0; 
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .right-section{
@@ -42,7 +44,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
+    margin-left: 20px auto;
     padding: 80px 10000px 200px 50px;
     
     
@@ -57,10 +59,10 @@ form {
 
 .input-field {
     margin-bottom: 40px; 
-    padding: 20px; 
+    padding: 15px; 
     border-radius: 5px; 
     border: 1.5px solid white; 
-    font-size: 16px; 
+    font-size: 1rem; 
     background-color: transparent;
     color: white;
      
@@ -74,7 +76,7 @@ form {
     padding: 12px; 
     background-color: #4CAF50; 
     color: white; 
-    font-size: 16px; 
+    font-size: 1rem; 
     border: none; 
     border-radius: 5px; 
     cursor: pointer; 
@@ -89,8 +91,14 @@ form {
 
 .google-btn {
     display: flex;
-    justify-content: center; 
-    width: 188%;
+    align-items: center; 
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid white; 
+    border-radius: 5px; 
+    width: 100%; 
+    padding: 15px;
+    margin: 10px 0; 
     
 }
 
@@ -128,5 +136,78 @@ form {
 .google-logo{
     margin-left: 100px;
 }
+
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .left-section, .right-section {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .left-section h1 {
+        font-size: 1.5rem; 
+    }
+
+    .left-section p {
+        font-size: 0.9rem; 
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .input-field{
+        padding: 10px;
+    }
+
+    .google-signin {
+        flex-direction: column; 
+        align-items: center;
+    }
+}
+
+@media (max-width: 1148px) {
+    .content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .left-section, .right-section {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 520px) { 
+    form {
+        width: 90%; 
+        padding: 10px; 
+    }
+    
+    .input-field {
+        font-size: 1rem; 
+        padding: 12px;
+    }
+
+    .register-btn {
+        padding: 15px; 
+        font-size: 1rem; 
+    }
+
+    .login-text {
+        font-size: 0.9rem;
+    }
+}
+
 
 
