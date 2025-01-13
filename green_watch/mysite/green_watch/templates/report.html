@@ -19,13 +19,13 @@
     </div>
     <form  method="post" action= "{% url 'submit_report' %}" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="text" name="location" placeholder="Enter Location" class="input-field">
-        <input type="text" name="community_name" placeholder="Enter Community Name/Sub-location" class="input-field">
-        <textarea name="description" placeholder="Enter Description of the issue here...">Description of the issue</textarea>
+        <input type="text" name="location" placeholder="Enter Location" class="input-field" required>
+        <input type="text" name="community_name" placeholder="Enter Community Name/Sub-location" class="input-field" required>
+        <textarea name="description" placeholder="Enter Description of the issue here..." required>Description of the issue</textarea>
         <div class="file-upload-wrapper">
             <i class="fas fa-cloud-upload-alt"></i> 
             <span>(Optional): Upload image of the waste issue</span>
-            <input type="file" name="photo" accept="image/*"> 
+            <input type="file" name="photo" accept="image/*" required> 
         </div>
         <button type="submit" class="report-btn">Submit</button>
         
