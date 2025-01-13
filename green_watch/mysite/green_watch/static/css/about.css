@@ -25,9 +25,10 @@
     }
 
     .about-text{
-        margin: 0px 0px 50px 150px;
+        margin: 0px 0px 50px 0px;
         background-color: #f4f4f4;
         padding-top: 40px;
+        text-align: center;
     }
 
     h2{
@@ -35,7 +36,6 @@
         font-family: Marko One;
     }
 
-    /* Card container */
     .card-container {
         display: flex;
         gap: 20px;
@@ -46,9 +46,9 @@
         padding: 10px 50px 50px 50px;
     }
 
-    /* Card styling */
+
     .card {
-        background-color: #4F7953; /* Dark green background */
+        background-color: #4F7953; 
         color: white;
         border-radius: 10px;
         padding: 20px;
@@ -56,14 +56,14 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Card title styling */
+  
     .card h3 {
         font-size: 20px;
         margin-bottom: 10px;
         font-weight: bold;
     }
 
-    /* Card text styling */
+
     .card p {
         font-size: 16px;
         line-height: 1.5;
@@ -88,14 +88,14 @@
 
 }
 
-    /* Flexbox layout for the numbered boxes */
+   
     .mission-cards {
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
     }
 
-    /* Individual card styles */
+  
     .mission-card {
         background-color: transparent;
         padding: 20px;
@@ -109,7 +109,7 @@
         flex-direction: row;
     }
 
-    /* Numbered box inside the card */
+  
     .mission-card .number-box {
         background-color: white;
         color: black;
@@ -168,7 +168,7 @@
 
     }
 
-    /* Timeline container */
+   
     .timeline-container {
         display: flex;
         flex-direction: column;
@@ -177,7 +177,7 @@
         margin: 25px 55px 0px 0px;
     }
 
-    /* Line in the center of the timeline */
+ 
     .timeline-line {
         position: absolute;
         left: 50%;
@@ -186,7 +186,7 @@
         background-color: #ddd;
     }
 
-    /* Common styling for each timeline item */
+ 
     .timeline-item {
         display: flex;
         align-items: center;
@@ -202,7 +202,7 @@
         justify-content: flex-end;
     }
 
-    /* Numbered box */
+ 
     .number-box {
         background-color: #777;
         color: white;
@@ -217,13 +217,13 @@
         z-index: 1;
     }
 
-    /* Left content */
+
     .timeline-item.left .number-box {
         margin-left: 50px;
         margin-right: 0;
     }
 
-    /* Content box */
+
     .content-box {
         background-color: white;
         padding: 20px;
@@ -232,14 +232,14 @@
         width: 45%;
     }
 
-    /* Styling for titles */
+ 
     .content-box h3 {
         font-size: 22px;
         font-weight: bold;
         margin-bottom: 10px;
     }
 
-    /* Align content to the right or left */
+
     .timeline-item.left .content-box {
         margin-right: 10%;
     }
