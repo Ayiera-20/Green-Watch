@@ -9,4 +9,6 @@ activate
 decativate
 .DS_Store
 settings_local.py
+staticfiles/
+
 
