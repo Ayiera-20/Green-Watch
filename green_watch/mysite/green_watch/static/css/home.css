@@ -10,6 +10,8 @@
     background-image: url('../images/Intro-background.jpg');
     background-size: cover;
     background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.3);
 
 }
@@ -23,6 +25,9 @@
     z-index: 1; 
     margin: 200px 0px 0px 30px;
     font-style: Marko One;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .intro .intro-buttons{
@@ -42,6 +47,7 @@
 }
 
 
+
 .intro .intro-buttons .intro-button2{
     background-color: #3F734C;
     padding: 12px 25px;
@@ -50,11 +56,21 @@
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+
+
 }
+
+
+.intro-buttons{
+    display: flex;
+    flex-wrap: wrap;
+}  
+
 
 
 .what-we-do {
     display: flex;
+    flex-wrap: wrap;
     padding: 10px 50px 10px 100px;
     margin: 30px 100px 0px 10px;
 
@@ -68,10 +84,12 @@
     
 }
 
-.cleaning-img{
-    width: 50%; 
-    height: 100%; 
+.what-we-do .content img{
+    width: 400px; 
     margin-right: 100px; 
+    display: block;
+    max-width: 100%;
+    height: auto; 
 }
 .text{
     margin-top: 5px;
@@ -86,6 +104,13 @@ h3{
 h2{
     padding-bottom: 30px;
     color: #3F734C;
+}
+
+.text h3, h2, p{
+    text-align: left;
+    max-width: 600px;
+    justify-content: left;
+    margin: 0 auto; 
 }
 
 .btn-primary{
@@ -105,23 +130,23 @@ h2{
 }
 
 .report{
-    margin-left: 200px;
+    margin-left: 100px;
     margin-bottom: 20px;
 }
 
 .report-content{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    margin: 0px 0px 0px 50px;
 
 }
 
 .report-img{
-    display: flex;
-    
     width: 30%; 
-    height: 100%; 
     margin-left: 500px;
+    display: block;
+    max-width: 100%;
+    height: auto; 
 
 }
 
@@ -170,6 +195,7 @@ h2{
 
 .recycling-centers .center-locator {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
@@ -190,10 +216,10 @@ h2{
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
+    line-height: 30px;
 }
 
 .community-events h2 {
-    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -211,6 +237,9 @@ h2{
 .partner-logos img {
     width: 150px;
     margin: 0 20px;
+}
+.partners h2, .recycling-centers h2, .community-events h2{
+    text-align: center;
 }
 
 
@@ -234,3 +263,71 @@ h2{
 }
 
 
+
+
+@media (max-width: 762px) {
+    .what-we-do .content img{
+        display: none;
+    }
+
+    .what-we-do{
+            max-width: 600px;
+            justify-content: center;
+            margin: 0 auto; 
+            padding-top: 30px;
+            text-align: center;
+    }
+    .text h3, h2{
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto; 
+    }
+
+    .report-img{
+        display: none;
+    }
+
+    .report{
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto; 
+        padding-bottom: 30px;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    .intro-background{
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 80vh;
+    
+    }
+}
+
+
+
+@media (max-width: 1047px) {
+    .what-we-do .content{
+        flex-direction: column;
+    }
+    .text h2{
+        padding-top: 20px;
+    }
+
+    .report{
+        margin: 0;
+        padding-left: 100px;
+        padding-bottom: 40px;
+    }
+    .report-content{
+        gap: 150px;
+    }
+
+
+    .report-img{
+        width: 250px;
+        margin:0;
+    }
+    
+}
