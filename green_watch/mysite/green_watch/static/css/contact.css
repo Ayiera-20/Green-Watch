@@ -109,6 +109,10 @@ textarea {
     .submit-btn {
         font-size: 14px;
     }
+
+    .card-form input, .card-form textarea{
+        width: 380px;
+    }
 }
 
 
@@ -123,7 +127,7 @@ textarea {
     }
 
     .card-form input, .card-form textarea{
-        width: 330px;
+        width: 300px;
     }
 
     .card-contact-info p {
