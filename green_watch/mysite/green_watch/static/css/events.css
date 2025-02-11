@@ -16,34 +16,37 @@ h1{
 
 .upcoming-events{
     display: flex;
-    padding-top: 40px 20px 20px 60px;
-    margin-left: 40px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: center;
+    gap: 25px;
     
 }
 .event-img{
-    width: 90%;
-    height: 80%;
+    width: 260px;
+    height: auto;
+    border-radius: 20px;
 }
 
 .upcoming-events-text{
     color: #3F734C;
-    font-size: 16;
+    font-size: 22px;
     font-weight: bold;
-    margin-left: 40px;
+    padding-left: 150px;
+    padding-top: 20px;
 }
 
 
 .last-section{
     position: relative;
-    height: 80vh;
+    height: 90vh;
     background-image: url('../images/recycle.jpg');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.5);
-    background-position: center;
     background-repeat: no-repeat;
     color: white;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 h2{
@@ -59,5 +62,31 @@ h2{
     text-align: center;
     padding: 50px;
     width: 300px;
-    margin-left: 550px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 480x){
+    .events{
+        height: 50vh;
+    }
+
+    .upcoming-events-text{
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    .last-section{
+        height: 50vh;
+    }
+   
+}
+
+@media (max-width: 768px){
+    .last-section{
+        height: 50vh;
+    }
+   
 }
