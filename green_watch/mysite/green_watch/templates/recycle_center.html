@@ -7,27 +7,43 @@
     <title> Recycle Centers</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/recycle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://fonts.googleapis.com/css?family=Playwrite US Trad' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Marko One' rel='stylesheet'>
 </head>
 
 <body>
-        <div>
-            <nav class="navbar" style="color: #3F734C;">
-        <div class="logo">
-            <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
-            <p style="font-family: Arial; font-size:8px;, font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
-        </div> 
-        <ul class="nav-links">
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'report' %}">Report Waste</a></li>
-        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
-        <li><a href="{% url 'events' %}">Events</a></li>
-        </ul>
-        <button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button>  
-    </nav>
+    <div>
+        <nav class="navbar" style="color: #3F734C;">
+            <div class="logo">
+                <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
+                <p style="font-family: Arial; font-size:8px; font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
+            </div> 
+            <ul class="nav-links">
+                <li style="margin-left:200px"><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'report' %}">Report Waste</a></li>
+                <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button></li>
+            <div class="toogle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            </ul>
+        </nav>
+        <div class="dropdown_menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'report' %}">Report Waste</a></li>
+            <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+            <li><a href="{% url 'events' %}">Events</a></li>
+            <li><button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button></li>
+            
         </div>
+    </div>
+           
+   
+        
     <input type="search" id="search" name="query" placeholder="Search Location here..." class="search-bar">
     <img src="{% static 'images/location.webp' %}" alt="map" class="map">
     <div class="center-location">
@@ -71,6 +87,24 @@
     <footer>
         <p>&copy; 2024 Green Watch. All Rights Reserved.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    
+            const toogleBtn = document.querySelector('.toogle-btn');
+            const toogleBtnIcon = document.querySelector('.toogle-btn i');
+            const dropDownMenu = document.querySelector('.dropdown_menu');
+    
+            if (toogleBtn && toogleBtnIcon && dropDownMenu) {
+                toogleBtn.onclick = function () {
+                    dropDownMenu.classList.toggle('open');
+                    const isOpen = dropDownMenu.classList.contains('open');
+                    toogleBtnIcon.classList = isOpen 
+                        ? 'fa-solid fa-xmark' 
+                        : 'fa-solid fa-bars';
+                }
+            }
+        });
+    </script>
 
 
 </body>
