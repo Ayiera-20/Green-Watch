@@ -156,6 +156,9 @@ h2{
     margin-top: 60px;
 
 }
+.text-report p{
+    margin-top: 20px;
+}
 
 .report-btn{
     background-color: #3F734C;
@@ -174,9 +177,7 @@ h2{
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.text-report p{
-    margin-top: 20px;
-}
+
 
 
 .recycling-centers {

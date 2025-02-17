@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> GreenWatch Homepage</title>
     {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Playwrite US Trad' rel='stylesheet'>
@@ -13,36 +14,60 @@
 </head>
 
 <body>
-    <div class="intro-background">
-        <nav class="navbar">
-    <div class="logo">
-        <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
-        <p style="font-family: Arial; font-size:8px; font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
-    </div>
-    <ul class="nav-links">
-        {% if user.is_authenticated %}
-
-            <li style="margin-left:200px"><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'report' %}">Report Waste</a></li>
-            <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
-            <li><a href="{% url 'events' %}">Events</a></li>
-            <li style="margin-left:250px"><a href="{% url 'logout' %}">Logout</a></li>
-        {% else %}
-
-            <li style="margin-left:100px"><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'report' %}">Report Waste</a></li>
-            <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
-            <li><a href="{% url 'events' %}">Events</a></li>
-            <li style="margin-left:200px"><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
-        {% endif %}
-    </ul>
-    <button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button>
-</nav>
-
-
+        <div class="intro-background">
+            <nav class="navbar">
+                <div class="logo">
+                    <p style="font-family: Playwrite US Trad; font-size:16px;">GreenWatch</p>
+                    <p style="font-family: Arial; font-size:8px; font-weight:50"> Community Waste Management and<br> Recycling Platform<p>
+                </div>
+                <ul class="nav-links">
+                    {% if user.is_authenticated %}
+    
+                        <li style="margin-left:200px"><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'report' %}">Report Waste</a></li>
+                        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+                        <li ><a href="{% url 'events' %}">Events</a></li>
+                        <li style="margin-left:250px"><a href="{% url 'logout' %}">Logout</a></li>
+                        <li><button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button></li>
+                    {% else %}
+    
+                        <li style="margin-left:100px"><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'report' %}">Report Waste</a></li>
+                        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+                        <li><a href="{% url 'events' %}">Events</a></li>
+                        <li style="margin-left:200px"><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                        <li><button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button></li>
+                    {% endif %}
+                </ul> 
+                <div class="toogle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <div class="dropdown_menu">
+                {% if user.is_authenticated %}
+    
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'report' %}">Report Waste</a></li>
+                        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+                        <li ><a href="{% url 'events' %}">Events</a></li>
+                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+    
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'report' %}">Report Waste</a></li>
+                        <li><a href="{% url 'recycle_center' %}">Recycling Centers</a></li>
+                        <li><a href="{% url 'events' %}">Events</a></li>
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                        <li><button class="contact-btn" onclick="window.location.href='{% url 'contact' %}'">Contact</button></li>
+                    {% endif %}
+            </div>
+    
     <section class="intro">
     <div>
         <h1>Clean Today, Sustain <br> Tomorrow: <br> Join the Movement for<br> a Waste-Free Community!</h1>
@@ -117,6 +142,25 @@
     <footer>
         <p>&copy; 2024 Green Watch. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    
+            const toogleBtn = document.querySelector('.toogle-btn');
+            const toogleBtnIcon = document.querySelector('.toogle-btn i');
+            const dropDownMenu = document.querySelector('.dropdown_menu');
+    
+            if (toogleBtn && toogleBtnIcon && dropDownMenu) {
+                toogleBtn.onclick = function () {
+                    dropDownMenu.classList.toggle('open');
+                    const isOpen = dropDownMenu.classList.contains('open');
+                    toogleBtnIcon.classList = isOpen 
+                        ? 'fa-solid fa-xmark' 
+                        : 'fa-solid fa-bars';
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
