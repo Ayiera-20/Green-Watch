@@ -1,7 +1,7 @@
 .events{
     position: relative;
     height: 70vh;
-    background-image: url('../images/events.jpg');
+    background-image: url('../images/events.webp');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.6);
@@ -40,7 +40,7 @@ h1{
 .last-section{
     position: relative;
     height: 90vh;
-    background-image: url('../images/recycle.jpg');
+    background-image: url('../images/recycle.webp');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.5);
@@ -88,7 +88,6 @@ h2{
 @media (max-width: 768px){
     .last-section{
         height: 50vh;
-        /* margin-bottom: 1px; */
     }
     .last-section-text{
         margin-bottom: 0;

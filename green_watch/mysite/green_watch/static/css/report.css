@@ -2,7 +2,7 @@
 body{
     position: relative;
     height: 100vh; 
-    background-image: url('../images/reporti.jpg');
+    background-image: url('../images/reporti.webp');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.8);

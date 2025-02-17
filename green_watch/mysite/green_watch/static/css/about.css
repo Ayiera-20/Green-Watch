@@ -2,7 +2,7 @@
     .events{
     position: relative;
     height: 70vh;
-    background-image: url('../images/aboutt.jpg');
+    background-image: url('../images/aboutt.webp');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.6);
@@ -77,7 +77,7 @@
 .mission-image{
     position: relative;
     height: 110vh;
-    background-image: url('../images/mission-img.jpg');
+    background-image: url('../images/mission-img.webp');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.7);
@@ -165,7 +165,7 @@
 
     .what-we-do {
         justify-content: center;
-        background-image: url('../images/Recycle\ Sign.jpg');
+        background-image: url('../images/Recycle\ Sign.webp');
         background-size: 80% 80%;;
         background-position: center;
         background-repeat: no-repeat;
