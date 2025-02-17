@@ -128,21 +128,17 @@ h2{
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.report{
-    padding-left: 100px;
-    padding-bottom: 20px;
-}
 
 .report-content{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-around;
 
 }
 
 .report-img{
     width: 30%; 
-    margin-left: 500px;
     display: block;
     max-width: 100%;
     height: auto; 
@@ -151,8 +147,9 @@ h2{
 
 .report{
     display: flex;
-    padding: 10px 50px;
-    margin-top: 5px; 
+    padding: 10px 50px 20px;
+    margin-top: 5px;
+    
 }
 
 .text-report{
@@ -290,7 +287,11 @@ h2{
         text-align: center;
         justify-content: center;
         margin: 0 auto; 
-        padding-bottom: 30px;
+        padding: 10px 100px 30px;
+    }
+    .report-content{
+        justify-content: center;
+        margin: 0 auto; 
     }
     
 }
@@ -302,6 +303,8 @@ h2{
     
     }
 }
+
+
 
 
 
