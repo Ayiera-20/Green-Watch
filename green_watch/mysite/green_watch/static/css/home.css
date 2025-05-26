@@ -207,6 +207,9 @@ h2{
 
 .community-events {
     padding: 50px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
     background-image: url('../images/people-cleaning.webp');
     background-size: cover;
     background-blend-mode: overlay;
@@ -229,6 +232,8 @@ h2{
 .partners {
     text-align: center;
     padding: 50px 0;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .partner-logos img {
