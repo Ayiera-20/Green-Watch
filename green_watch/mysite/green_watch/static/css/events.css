@@ -39,12 +39,14 @@ h1{
 
 .last-section{
     position: relative;
-    height: 90vh;
+    width: 100%;
+    height: 80vh;
     background-image: url('../images/recycle.webp');
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
+    background-position: center;
     color: white;
     margin-top: 100px;
 }
