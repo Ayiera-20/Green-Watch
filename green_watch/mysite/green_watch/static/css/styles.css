@@ -25,6 +25,7 @@
     border-radius: 5px; 
     transition: transform 0.3s ease, background-color 0.3s ease;
     display: inline-block;
+     border: solid 0.5px transparent;
 }
 
 .navbar .nav-links a:hover { 
